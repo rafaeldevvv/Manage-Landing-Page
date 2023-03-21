@@ -13,12 +13,14 @@
       href="./images/favicon-32x32.png"
     />
 
+    <script src="https://kit.fontawesome.com/134d9c6f51.js" crossorigin="anonymous"></script>
+
     <title>Frontend Mentor | Manage landing page</title>
   </head>
   <body>
     <header class="section-padding">
       <div class="container">
-        <img src="./images/logo.svg" alt="Logo" class="logo" />
+        <img src="./images/logo.svg" alt="Manage's Logo" class="logo" />
 
         <nav>
           <button id="toggle-nav-button"></button>
@@ -42,22 +44,6 @@
             </ul>
           </div>
         </nav>
-
-        <script>
-          const navListContainer = document.querySelector(".around");
-
-          document
-            .querySelector("#toggle-nav-button")
-            .addEventListener("click", () => {
-              const visible = navListContainer.getAttribute("data-visible");
-
-              navListContainer.setAttribute(
-                "data-visible",
-                visible == "true" ? false : true
-              );
-            });
-        </script>
-
         <a href="#" class="btn primary-btn hide-mobile"> Get Started </a>
       </div>
     </header>
@@ -131,58 +117,56 @@
         </div>
       </section>
 
-      <section id="testimonials" class="section-padding">
-        <div class="container">
-          <h2>What they’ve said</h2>
-          <div class="slider">
-            <div class="inner-container">
-              <div class="testimonial">
-                <img src="./images/avatar-anisha.png" alt="Anisha Li" />
-                <h3>Anisha Li</h3>
-                <p>
-                  “Manage has supercharged our team’s workflow. The ability to
-                  maintain visibility on larger milestones at all times keeps
-                  everyone motivated.”
-                </p>
-              </div>
+      <section id="testimonials">
+        <h2>What they’ve said</h2>
+        <div class="slider">
+          <div class="inner-container">
+            <article class="testimonial">
+              <img src="./images/avatar-anisha.png" alt="Anisha Li" />
+              <h3>Anisha Li</h3>
+              <p>
+                “Manage has supercharged our team’s workflow. The ability to
+                maintain visibility on larger milestones at all times keeps
+                everyone motivated.”
+              </p>
+            </article>
 
-              <div class="testimonial">
-                <img src="./images/avatar-ali.png" alt="Ali Bravo" />
-                <h3>Ali Bravo</h3>
-                <p>
-                  “We have been able to cancel so many other subscriptions since
-                  using Manage. There is no more cross-channel confusion and
-                  everyone is much more focused.”
-                </p>
-              </div>
+            <article class="testimonial">
+              <img src="./images/avatar-ali.png" alt="Ali Bravo" />
+              <h3>Ali Bravo</h3>
+              <p>
+                “We have been able to cancel so many other subscriptions since
+                using Manage. There is no more cross-channel confusion and
+                everyone is much more focused.”
+              </p>
+            </article>
 
-              <div class="testimonial">
-                <img src="./images/avatar-richard.png" alt="Richard Watts" />
-                <h3>Richard Watts</h3>
-                <p>
-                  “Manage allows us to provide structure and process. It keeps
-                  us organized and focused. I can’t stop recommending them to
-                  everyone I talk to!”
-                </p>
-              </div>
+            <article class="testimonial">
+              <img src="./images/avatar-richard.png" alt="Richard Watts" />
+              <h3>Richard Watts</h3>
+              <p>
+                “Manage allows us to provide structure and process. It keeps us
+                organized and focused. I can’t stop recommending them to
+                everyone I talk to!”
+              </p>
+            </article>
 
-              <div class="testimonial">
-                <img src="./images/avatar-shanai.png" alt="" />
-                <h3>Shanai Gough</h3>
-                <p>
-                  “Their software allows us to track, manage and collaborate on
-                  our projects from anywhere. It keeps the whole team in-sync
-                  without being intrusive.”
-                </p>
-              </div>
-            </div>
+            <article class="testimonial">
+              <img src="./images/avatar-shanai.png" alt="" />
+              <h3>Shanai Gough</h3>
+              <p>
+                “Their software allows us to track, manage and collaborate on
+                our projects from anywhere. It keeps the whole team in-sync
+                without being intrusive.”
+              </p>
+            </article>
           </div>
-          <div class="balls">
-            <div class="ball" data-selected="true"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-          </div>
+        </div>
+        <div class="balls">
+          <div class="ball" data-selected="true"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
         </div>
         <a href="#" class="btn primary-btn">Get Started</a>
       </section>
@@ -198,7 +182,16 @@
     <footer>
       <div class="container">
         <form>
-          <input type="text" placeholder="Updates in your inbox…" class="field" />
+          <label for="email">
+            <input
+              type="email"
+              placeholder="Updates in your inbox…"
+              class="field" 
+              id="email"
+              name="email"
+            />
+            <p class="error-message">Please insert a valid email</p>
+          </label>
           <button type="submit" class="btn primary-btn">GO</button>
         </form>
         <div class="lists">
@@ -233,31 +226,36 @@
           <ul class="socials">
             <li>
               <a href="#">
-                <img src="./images/icon-facebook.svg" alt="Facebook Icon" />
+                <i class="fa fa-facebook"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="./images/icon-youtube.svg" alt="Youtube Icon" />
+                <i class="fa fa-youtube"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="./images/icon-twitter.svg" alt="Twitter Icon" />
+                <i class="fa fa-twitter"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="./images/icon-pinterest.svg" alt="Pinterest Icon" />
+                <i class="fa fa-pinterest"></i>
               </a>
             </li>
             <li>
               <a href="#">
-                <img src="./images/icon-instagram.svg" alt="Instagram Icon" />
+                <i class="fa fa-instagram"></i>
               </a>
             </li>
           </ul>
-          <svg xmlns="http://www.w3.org/2000/svg" width="146" height="24" class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="146"
+            height="24"
+            class="logo"
+          >
             <g fill="none" fill-rule="evenodd">
               <path
                 fill="#fff"
@@ -279,15 +277,16 @@
             </g>
           </svg>
         </div>
+
+        <div class="copyright">Copyright 2020. All Rights Reserved</div>
       </div>
 
-      <div class="copyright">Copyright 2020. All Rights Reserved</div>
 
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="https://github.com/rafaeldevvv">Rafael Maia</a>.
       </div>
     </footer>
 

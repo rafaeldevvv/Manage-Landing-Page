@@ -20,10 +20,8 @@ document.querySelector(".slider").addEventListener("scroll", (e) => {
   balls[Math.round(ballNumber)].setAttribute("data-selected", true);
 });
 
-const emailExp = /^[\w\d]+@\w+\.\w{2,3}$/
+const emailExp = /^[\w\d]+@\w+\.\w{2,3}$/;
 document.querySelector('form').onsubmit = e => {
-  e.preventDefault();
-
   const form = e.target;
   const emailField = form.elements.email;
   const errorOutput = document.querySelector('.error-message');
@@ -31,6 +29,7 @@ document.querySelector('form').onsubmit = e => {
   if (!emailExp.test(emailField.value)) {
     errorOutput.style.display = 'block'
     emailField.classList.add('failed');
+    e.preventDefault();
   } else {
     emailField.classList.remove('failed');
     errorOutput.style.display = 'none';

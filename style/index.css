@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
   font-size: 16px;
 }
 
@@ -16,6 +16,16 @@ body {
   background-repeat: no-repeat;
   background-position: calc(100% + 140px) -120px;
   background-size: 450px auto;
+}
+
+body::-webkit-scrollbar {
+  background-color: hsl(228, 39%, 23%);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: hsl(12, 88%, 59%);
+  border: 2px solid hsla(0, 0%, 10%, 0.3);
+  border-radius: 30px/70px;
 }
 
 ul {
@@ -129,6 +139,7 @@ a {
 .error-message {
   color: hsl(12, 88%, 59%);
   font-size: 0.7rem;
+  text-align: left;
 }
 
 /* ################ HEADER ################ */
@@ -379,12 +390,16 @@ footer .container {
 }
 footer form {
   display: flex;
+  align-items: start;
+  justify-content: stretch;
   gap: 0.5rem;
   grid-area: form;
-  align-items: start;
 }
 footer form label {
   flex-shrink: 10;
+}
+footer form label, footer form .btn {
+  flex-grow: 1;
 }
 footer form .field {
   width: 100%;
@@ -606,6 +621,7 @@ footer .copyright {
   #filler {
     background-image: url("../images/bg-simplify-section-desktop.svg");
     background-position: 0 0;
+    padding-block: 4rem;
   }
   #filler .container {
     display: flex;
@@ -633,7 +649,7 @@ footer .copyright {
     gap: 5.5rem;
   }
   footer .lists {
-    gap: 200px;
+    gap: 12.5rem;
     padding: 0;
   }
   footer .copyright {
@@ -641,7 +657,7 @@ footer .copyright {
     text-align: right;
   }
   .footer-list a {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
   .socials {
     justify-content: start;

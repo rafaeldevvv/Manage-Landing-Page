@@ -14,7 +14,7 @@ $very-light-gray: hsl(0, 0%, 98%);
   box-sizing: border-box;
 }
 
-html, body {
+html {
   font-size: 16px;
 }
 
@@ -26,6 +26,14 @@ body {
   background-repeat: no-repeat;
   background-position: calc(100% + 140px) -120px;
   background-size: 450px auto;
+}
+body::-webkit-scrollbar {
+  background-color: $dark-blue;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: $bright-red;
+  border: 2px solid hsla(0,0%,10%, .3);
+  border-radius: 30px / 70px;
 }
 
 ul {
@@ -126,6 +134,7 @@ a {
 .error-message {
   color: $bright-red;
   font-size: .7rem;
+  text-align: left;
 }
 
 /* ################ HEADER ################ */
@@ -421,12 +430,18 @@ footer {
 
   form {
     display: flex;
-    gap: 0.5rem;
-    grid-area: form;
     align-items: start;
+    justify-content: stretch;
+    gap: 0.5rem;
+
+    grid-area: form;
 
     label {
       flex-shrink: 10;
+    }
+
+    label, .btn {
+      flex-grow: 1;
     }
 
     .field {
@@ -704,6 +719,8 @@ footer {
   #filler {
     background-image: url("../images/bg-simplify-section-desktop.svg");
     background-position: 0 0;
+    padding-block: 4rem;
+
     .container {
       display: flex;
       justify-content: space-between;
@@ -739,7 +756,7 @@ footer {
     }
 
     .lists {
-      gap: 200px;
+      gap: 12.5rem;
       padding: 0;
     }
 
@@ -751,7 +768,7 @@ footer {
 
   .footer-list {
     a {
-      font-size: .95rem;
+      font-size: .9rem;
     }
   }
 

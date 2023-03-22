@@ -78,7 +78,8 @@ a {
   padding-inline: min(5vw, 4rem);
 }
 
-.field, .btn {
+.field,
+.btn {
   padding: 0.9rem 2rem;
   border-radius: 2.8rem;
 }
@@ -313,6 +314,18 @@ section h2 {
 #testimonials .slider > * {
   flex-shrink: 0;
 }
+#testimonials .slider::-webkit-scrollbar {
+  height: 0.23cm;
+}
+#testimonials .slider::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 70%);
+  border-radius: 15px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+#testimonials .slider::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0, 0%, 60%);
+}
 #testimonials .inner-container {
   display: grid;
   grid-template-columns: repeat(4, 375px);
@@ -398,7 +411,8 @@ footer form {
 footer form label {
   flex-shrink: 10;
 }
-footer form label, footer form .btn {
+footer form label,
+footer form .btn {
   flex-grow: 1;
 }
 footer form .field {
@@ -597,18 +611,6 @@ footer .copyright {
     overflow-x: scroll;
     padding-bottom: 0;
   }
-  #testimonials .slider::-webkit-scrollbar {
-    height: 0.23cm;
-  }
-  #testimonials .slider::-webkit-scrollbar-thumb {
-    background-color: hsl(0, 0%, 70%);
-    border-radius: 15px;
-    -webkit-transition: background-color 0.3s;
-    transition: background-color 0.3s;
-  }
-  #testimonials .slider::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(0, 0%, 60%);
-  }
   #testimonials .inner-container {
     grid-template-columns: repeat(4, 550px);
     gap: 4rem;
@@ -653,7 +655,7 @@ footer .copyright {
     padding: 0;
   }
   footer .copyright {
-    margin-top: 5.5rem;
+    margin-top: 4rem;
     text-align: right;
   }
   .footer-list a {

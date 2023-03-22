@@ -32,7 +32,7 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-thumb {
   background-color: $bright-red;
-  border: 2px solid hsla(0,0%,10%, .3);
+  border: 2px solid hsla(0, 0%, 10%, 0.3);
   border-radius: 30px / 70px;
 }
 
@@ -73,7 +73,7 @@ p {
 a {
   text-decoration: none;
   transition-property: color, filter, background-color;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 
 /* ################ utility classes ################ */
@@ -85,8 +85,9 @@ a {
 .section-padding {
   padding-inline: min(5vw, 4rem);
 }
-.field, .btn {
-  padding: .9rem 2rem;
+.field,
+.btn {
+  padding: 0.9rem 2rem;
   border-radius: 2.8rem;
 }
 .btn {
@@ -98,7 +99,7 @@ a {
   cursor: pointer;
 
   transition-property: background-color, color, filter;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 .primary-btn {
   background-color: $bright-red;
@@ -133,7 +134,7 @@ a {
 
 .error-message {
   color: $bright-red;
-  font-size: .7rem;
+  font-size: 0.7rem;
   text-align: left;
 }
 
@@ -339,6 +340,18 @@ section {
     }
   }
 
+  .slider::-webkit-scrollbar {
+    height: 0.23cm;
+  }
+  .slider::-webkit-scrollbar-thumb {
+    background-color: hsla(0, 0%, 70%);
+    border-radius: 15px;
+    transition: background-color 0.3s;
+  }
+  .slider::-webkit-scrollbar-thumb:hover {
+    background-color: hsla(0, 0%, 60%);
+  }
+
   .inner-container {
     display: grid;
     grid-template-columns: repeat(4, 375px);
@@ -421,11 +434,11 @@ footer {
   .container {
     display: grid;
     gap: 4rem;
-    grid-template-areas: 
-    'form'
-    'lists'
-    'socials-and-logo'
-    'copyright';
+    grid-template-areas:
+      "form"
+      "lists"
+      "socials-and-logo"
+      "copyright";
   }
 
   form {
@@ -440,7 +453,8 @@ footer {
       flex-shrink: 10;
     }
 
-    label, .btn {
+    label,
+    .btn {
       flex-grow: 1;
     }
 
@@ -453,7 +467,7 @@ footer {
     }
 
     .error-message {
-      margin-top: .2rem;
+      margin-top: 0.2rem;
       margin-left: 1rem;
       display: none;
     }
@@ -478,7 +492,6 @@ footer {
     flex-direction: column;
     gap: 3rem;
   }
-
 
   .copyright {
     grid-area: copyright;
@@ -523,7 +536,7 @@ footer {
 
 .attribution {
   margin-top: 3rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
   text-align: center;
 
   a {
@@ -692,17 +705,6 @@ footer {
       overflow-x: scroll;
       padding-bottom: 0;
     }
-    .slider::-webkit-scrollbar {
-      height: 0.23cm;
-    }
-    .slider::-webkit-scrollbar-thumb {
-      background-color: hsla(0, 0%, 70%);
-      border-radius: 15px;
-      transition: background-color 0.3s;
-    }
-    .slider::-webkit-scrollbar-thumb:hover {
-      background-color: hsla(0, 0%, 60%);
-    }
 
     .inner-container {
       grid-template-columns: repeat(4, 550px);
@@ -739,8 +741,8 @@ footer {
     .container {
       grid-template-columns: repeat(3, max-content);
       grid-template-areas:
-      'socials-and-logo lists form'
-      'socials-and-logo lists copyright';
+        "socials-and-logo lists form"
+        "socials-and-logo lists copyright";
       justify-content: space-between;
       gap: 0;
     }
@@ -761,14 +763,14 @@ footer {
     }
 
     .copyright {
-      margin-top: 5.5rem;
+      margin-top: 4rem;
       text-align: right;
     }
   }
 
   .footer-list {
     a {
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
   }
 

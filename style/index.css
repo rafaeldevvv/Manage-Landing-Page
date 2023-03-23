@@ -329,6 +329,7 @@ section h2 {
 #testimonials .inner-container {
   display: grid;
   grid-template-columns: repeat(4, 375px);
+  margin-inline: auto;
 }
 #testimonials .testimonial {
   padding: 3rem 2rem;

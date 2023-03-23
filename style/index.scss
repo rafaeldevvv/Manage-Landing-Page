@@ -355,6 +355,7 @@ section {
   .inner-container {
     display: grid;
     grid-template-columns: repeat(4, 375px);
+    margin-inline: auto;
   }
 
   .testimonial {

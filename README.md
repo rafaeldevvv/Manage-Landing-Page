@@ -175,6 +175,7 @@ In this project I practiced a lot of css techniques and learned a lot too. The s
 - [Stack Overflow](https://stackoverflow.com/questions/42421361/input-button-elements-not-shrinking-in-a-flex-container) - I didn't know that.
 - [w3schools](https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp) - I learned how to style scroll here.
 - [Stack Overflow](https://stackoverflow.com/questions/59369271/css-counter-with-a-number-padding) I learned how to pad start of css counter number with 0.
+- [Stack Overflow](https://stackoverflow.com/questions/8635799/overflow-xhidden-still-can-scroll) It gave me a solution to a problem: body was still showing horizontal scroll even with "overflow-x: hidden;".
 
 ## Author
 

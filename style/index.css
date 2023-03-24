@@ -428,7 +428,7 @@ footer form {
   gap: 0.5rem;
   grid-area: form;
 }
-footer form label,
+footer form .input-container,
 footer form .btn {
   flex-grow: 1;
 }

@@ -59,6 +59,7 @@ h5,
 h6 {
   color: $dark-blue;
   letter-spacing: -2px;
+  font-weight: 600;
 }
 
 p {
@@ -377,9 +378,16 @@ section {
     margin-inline: auto;
   }
 
+  .testimonial-container {
+    padding: 3rem 1.2rem 1rem;
+  }
+
   .testimonial {
-    padding: 3rem 2.2rem;
+    background-color: $very-light-gray;
     text-align: center;
+    position: relative;
+    padding: 2.5rem 1rem 2.3rem;
+    border-radius: .3rem;
 
     > * + * {
       margin-top: 1.4rem;
@@ -387,6 +395,10 @@ section {
 
     img {
       width: 75px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     h3 {
@@ -548,6 +560,12 @@ footer {
   }
   a:hover {
     color: $bright-red;
+  }
+
+  .hide {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
   }
 }
 
@@ -718,13 +736,7 @@ footer {
   #testimonials {
     padding-block: 7rem 11rem;
 
-    .testimonial {
-      p {
-        line-height: 1.6;
-        font-size: 1.05rem;
-      }
-    }
-
+    
     .slider {
       overflow-x: hidden;
       padding-bottom: 8px;
@@ -733,10 +745,18 @@ footer {
       overflow-x: scroll;
       padding-bottom: 0;
     }
-
+    
     .inner-container {
-      grid-template-columns: repeat(4, 550px);
-      gap: 4rem;
+      grid-template-columns: repeat(4, 600px);
+    }
+
+    .testimonial {
+      padding-inline: 2rem;
+      
+      p {
+        line-height: 1.6;
+        font-size: 1.05rem;
+      }
     }
 
     h2 {

@@ -10,28 +10,33 @@ document.querySelector("#toggle-nav-button").addEventListener("click", () => {
 });
 
 const balls = Array.from(document.querySelectorAll(".ball"));
+const slider = document.querySelector(".slider");
 
-document.querySelector(".slider").addEventListener("scroll", (e) => {
+slider.addEventListener("scroll", (e) => {
   // console.log(e.target.scrollLeft)
   // console.log(e.target.scrollWidth)
 
-  let ballNumber = ((e.target.scrollLeft / e.target.scrollWidth) * 100) / 25;
+  const ballNumber = ((slider.scrollLeft / slider.scrollWidth) * 100) / 25;
   balls.forEach((b) => b.setAttribute("data-selected", false));
   balls[Math.round(ballNumber)].setAttribute("data-selected", true);
 });
 
+balls.forEach((b, i) => b.addEventListener("click", () => {
+  slider.scrollLeft = i * .25 * slider.scrollWidth;
+}));
+
 const emailExp = /^[\w\d]+@\w+\.\w{2,3}$/;
-document.querySelector('form').onsubmit = e => {
+document.querySelector("form").onsubmit = (e) => {
   const form = e.target;
   const emailField = form.elements.email;
-  const errorOutput = document.querySelector('.error-message');
+  const errorOutput = document.querySelector(".error-message");
 
   if (!emailExp.test(emailField.value)) {
-    errorOutput.style.display = 'block'
-    emailField.classList.add('failed');
+    errorOutput.style.display = "block";
+    emailField.classList.add("failed");
     e.preventDefault();
   } else {
-    emailField.classList.remove('failed');
-    errorOutput.style.display = 'none';
+    emailField.classList.remove("failed");
+    errorOutput.style.display = "none";
   }
-}
+};

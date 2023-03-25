@@ -47,33 +47,39 @@ Users should be able to:
 I used font awesome instead of the icons provided by Front End Mentor because it is simpler to change color on hover.
 
 ```html
-<ul class="socials">
-  <li>
-    <a href="#">
-      <i class="fa fa-facebook"></i>
-    </a>
-  </li>
-  <li>
-    <a href="#">
-      <i class="fa fa-youtube"></i>
-    </a>
-  </li>
-  <li>
-    <a href="#">
-      <i class="fa fa-twitter"></i>
-    </a>
-  </li>
-  <li>
-    <a href="#">
-      <i class="fa fa-pinterest"></i>
-    </a>
-  </li>
-  <li>
-    <a href="#">
-      <i class="fa fa-instagram"></i>
-    </a>
-  </li>
-</ul>
+<div class="socials-and-logo">
+          <ul class="socials">
+            <li>
+              <a href="#">
+                <i class="fa fa-facebook"></i>
+                <span class="hide">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-youtube"></i>
+                <span class="hide">Youtube</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-twitter"></i>
+                <span class="hide">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-pinterest"></i>
+                <span class="hide">Pinterest</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-instagram"></i>
+                <span class="hide">Instagram</span>
+              </a>
+            </li>
+          </ul>
 ```
 
 In this project I used more rem than em because I searched the difference and I think rem is more suitable for most cases.

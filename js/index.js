@@ -21,9 +21,11 @@ slider.addEventListener("scroll", (e) => {
   balls[Math.round(ballNumber)].setAttribute("data-selected", true);
 });
 
-balls.forEach((b, i) => b.addEventListener("click", () => {
-  slider.scrollLeft = i * .25 * slider.scrollWidth;
-}));
+balls.forEach((b, i) =>
+  b.addEventListener("click", () => {
+    slider.scrollLeft = i * 0.25 * slider.scrollWidth;
+  })
+);
 
 const emailExp = /^[\w\d]+@\w+\.\w{2,3}$/;
 document.querySelector("form").onsubmit = (e) => {

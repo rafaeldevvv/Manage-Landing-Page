@@ -203,7 +203,7 @@ nav .around[data-visible=true] {
   pointer-events: all;
 }
 
-nav:has(.around[data-visible=true]) #toggle-nav-button {
+.around[data-visible=true] + #toggle-nav-button {
   background-image: url("../images/icon-close.svg");
 }
 

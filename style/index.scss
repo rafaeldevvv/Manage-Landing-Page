@@ -208,7 +208,7 @@ nav {
   }
 }
 
-nav:has(.around[data-visible="true"]) #toggle-nav-button {
+.around[data-visible="true"] + #toggle-nav-button {
   background-image: url("../images/icon-close.svg");
 }
 
@@ -387,7 +387,7 @@ section {
     text-align: center;
     position: relative;
     padding: 2.5rem 1rem 2.3rem;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
 
     > * + * {
       margin-top: 1.4rem;
@@ -640,7 +640,7 @@ footer {
     a {
       font-size: 0.9rem;
       // i know i could specify gap, but padding increases the range that the user can hover over
-      padding-inline: .8rem;
+      padding-inline: 0.8rem;
     }
   }
 
@@ -736,7 +736,6 @@ footer {
   #testimonials {
     padding-block: 7rem 11rem;
 
-    
     .slider {
       overflow-x: hidden;
       padding-bottom: 8px;
@@ -745,14 +744,14 @@ footer {
       overflow-x: scroll;
       padding-bottom: 0;
     }
-    
+
     .inner-container {
       grid-template-columns: repeat(4, 600px);
     }
 
     .testimonial {
       padding-inline: 2rem;
-      
+
       p {
         line-height: 1.6;
         font-size: 1.05rem;
